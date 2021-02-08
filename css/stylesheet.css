@@ -1,0 +1,13 @@
+*{
+margin: 0px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.wrap{
+    display: grid;
+    height: auto;
+    width: 100vw;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: 200px, 500px, 500px, 1fr, 200px;
+
+    /* fortsätt här :) */
+}
