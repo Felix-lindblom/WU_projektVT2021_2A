@@ -2,12 +2,47 @@
 margin: 0px;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+img{
+    width: 300px;
+    height: auto;
+}
 .wrap{
     display: grid;
     height: auto;
     width: 100vw;
     grid-template-columns: 1fr, 1fr;
     grid-template-rows: 200px, 500px, 500px, 1fr, 200px;
+    grid-template-areas: 
+    "nv nv"
+    "lk lk"
+    "lk lk"
+    "mi mi"
+    "ft ft" ;
+}
 
-    /* fortsätt här :) */
+.circle{
+grid-area: nv;
+}
+
+.paint-sale{
+grid-area: lk;
+display: grid;
+grid-template-rows: 1fr 1fr;
+grid-template-columns: 1fr 1fr;
+grid-template-areas: 
+"l1 l2"
+"l3 l4";
+background-color: blueviolet;
+}
+#paint-sale1{
+grid-area: l1;
+}
+#paint-sale2{
+grid-area: l2;
+}
+#paint-sale3{
+grid-area: l3;
+}
+#paint-sale4{
+grid-area: l4;
 }
