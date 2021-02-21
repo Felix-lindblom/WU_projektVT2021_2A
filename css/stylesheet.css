@@ -20,21 +20,42 @@ img{
     "ft ft" ;
 }
 
-.circle{
+nav{
 grid-area: nv;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: transparent;
 }
-
+.navlinks{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* position: sticky; kanske inte nödvändigt */
+    height: 100vh;
+    width: 100vw ;
+    align-items: center;
+    background-color: maroon;
+    list-style: none;
+}
+.navlinks a{
+   color: mintcream;
+   text-decoration: none;
+   font-size: 100px;
+}
 .paint-sale{
 grid-area: lk;
 display: grid;
+align-items: center;
+justify-items: center;
 grid-template-rows: 1fr 1fr;
 grid-template-columns: 1fr 1fr;
 grid-template-areas: 
 "l1 l2"
 "l3 l4";
-background-color: blueviolet;
 }
 #paint-sale1{
+align-items: center;
 grid-area: l1;
 }
 #paint-sale2{
