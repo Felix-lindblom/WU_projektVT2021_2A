@@ -1,6 +1,7 @@
 *{
 margin: 0px;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+padding: 0px;
 }
 img{
     width: 300px;
@@ -8,23 +9,23 @@ img{
 }
 .wrap{
     display: grid;
-    height: auto;
+    height: 2000px;
     width: 100vw;
-    grid-template-columns: 1fr, 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 200px, 500px, 500px, 1fr, 200px;
     grid-template-areas: 
-    "nv nv"
-    "lk lk"
-    "lk lk"
-    "mi mi"
-    "ft ft" ;
+    "nv"
+    "lk"
+    "lk"
+    "mi"
+    "ft" ;
 }
 .circle{
     grid-area: nv;
     display: flex;
     margin-top: 2%;
     justify-content: center;
-    cursor: pointer;
+
 }
 .toggle .circle{
     display: none;
@@ -34,7 +35,7 @@ img{
     width: 80px;
     border-radius: 50%;
     background-color: maroon;
-
+    cursor: pointer;
 }
 .circle div{
     display: flex;
@@ -50,7 +51,6 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: transparent;
     position: fixed; 
     bottom: 0px;
     height: 100vh;
@@ -80,6 +80,11 @@ img{
     right: 75px;
 
 }
+.nav-active{
+    /* transform: translate(100vh); */
+    position: fixed; 
+    bottom: 0px;
+}
 .paint-sale{
 grid-area: lk;
 display: grid;
@@ -103,4 +108,7 @@ grid-area: l3;
 }
 #paint-sale4{
 grid-area: l4;
+}
+.mobil-footer{
+grid-area: fo;
 }
