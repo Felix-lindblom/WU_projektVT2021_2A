@@ -9,7 +9,7 @@ img{
 }
 .wrap{
     display: grid;
-    height: 2000px;
+    height: 200vh;
     width: 100vw;
     grid-template-columns: 1fr;
     grid-template-rows: 200px, 500px, 500px, 1fr, 200px;
@@ -17,9 +17,20 @@ img{
     "nv"
     "lk"
     "lk"
-    "mi"
+    "ma"
     "ft" ;
 }
+.mobil-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; 
+    height: 100vh;
+    width: 100vw ;
+    align-items: center;
+
+}
+
 .circle{
     grid-area: nv;
     display: flex;
@@ -47,18 +58,7 @@ img{
     background-color: mintcream;
     margin: 4px;
 }
-.mobil-nav{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed; 
-    bottom: 0px;
-    height: 100vh;
-    width: 100vw ;
-    align-items: center;
-    background-color: maroon;
-    top: -100vh;
-}
+
 .nav-links{
     display: flex;
     flex-direction: column;
@@ -81,7 +81,8 @@ img{
 
 }
 .nav-active{
-    /* transform: translate(100vh); */
+    transform: translate(100vh);
+    background-color: maroon;    
     position: fixed; 
     bottom: 0px;
 }
@@ -108,6 +109,9 @@ grid-area: l3;
 }
 #paint-sale4{
 grid-area: l4;
+}
+.mobil-main{
+    grid-area: ma;
 }
 .mobil-footer{
 grid-area: fo;
