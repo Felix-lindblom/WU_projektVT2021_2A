@@ -10,10 +10,9 @@ img{
 .wrap{
     display: grid;
     width: 100%;
-    grid-template-rows: 150px, 500px, 500px, 1fr, 200px;
+    grid-template-rows: 10% 1000px 75% 200px;
     grid-template-areas: 
     "nv"
-    "lk"
     "lk"
     "ma"
     "fo"
