@@ -6,6 +6,9 @@ padding: 0px;
 h1{
     font-size: 70px;
 }
+h2{
+    font-size: 50px;
+}
 img{
     width: 300px;
     height: auto;
@@ -13,13 +16,14 @@ img{
 .wrap{
     display: grid;
     width: 100%;
-    grid-template-rows: 10% 1000px 55% 200px;
+    grid-template-rows: 100px 1000px 1450px 200px;
     grid-template-areas: 
     "nv"
     "lk"
     "ma"
     "fo"
     ;
+    overflow: hidden;
 }
 .circle{
     grid-area: nv;
@@ -46,7 +50,7 @@ img{
     margin: 4px;
 }
 /* verkar inte funka korrekt  */
-.toggle .circle{
+.circle .toggle {
     display: none;
 }
 .nav-links{
@@ -93,10 +97,22 @@ grid-template-areas:
 "l1 l2"
 "l3 l4";
 }
+.paint-sale h3{
+    display: flex;
+    justify-content: center;
+    opacity: 0.5;
+    position: absolute;
+}
 #paint-sale1{
 align-items: center;
 grid-area: l1;
 }
+/* #paint-sale1 h3{
+    color: mintcream;
+    z-index: 1;
+    position: absolute;
+    bottom: 3px;
+} */
 #paint-sale2{
 grid-area: l2;
 }
