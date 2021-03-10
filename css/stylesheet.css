@@ -10,20 +10,20 @@ h2{
     font-size: 50px;
 }
 img{
-    width: 300px;
+    width: 40vw;
     height: auto;
 }
 .wrap{
     display: grid;
     width: 100%;
-    grid-template-rows: 100px 1000px 1450px 200px;
+    height: auto;
+    grid-template-rows: 8vh 85vh auto 200px;
     grid-template-areas: 
     "nv"
     "lk"
     "ma"
     "fo"
     ;
-    overflow: hidden;
 }
 .circle{
     grid-area: nv;
@@ -33,8 +33,8 @@ img{
     justify-content: center;
 }
 #bak-circle{
-    height: 80px;
-    width: 80px;
+    height: 7vh;
+    width: 7vh;
     border-radius: 50%;
     background-color: maroon;
     cursor: pointer;
@@ -44,10 +44,10 @@ img{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 5px;
-    width: 35px;
+    height: 0.7vh;
+    width: 4vh;
     background-color: mintcream;
-    margin: 4px;
+    margin: 0.3vh;
 }
 /* verkar inte funka korrekt  */
 .circle .toggle {
@@ -96,6 +96,15 @@ grid-template-columns: 1fr 1fr;
 grid-template-areas: 
 "l1 l2"
 "l3 l4";
+}
+.paint-sale div{
+    height: 30vh;
+    width: 22vh;
+    overflow: hidden;
+}
+.paint-sale img{
+    width: 100%;
+    height: auto;
 }
 .paint-sale h3{
     display: flex;
