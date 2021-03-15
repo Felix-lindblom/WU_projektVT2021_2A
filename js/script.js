@@ -1,7 +1,6 @@
 // gör klart mig!!!
-
-const nav = document.querySelector('.nav-link-mobil')
-const circle = document.querySelector('.circle')
+const nav = document.querySelector('.nav-link')
+const circle = document.querySelector('.nav-but')
 
 function toggleMeny() {
     nav.classList.toggle('nav-active')
