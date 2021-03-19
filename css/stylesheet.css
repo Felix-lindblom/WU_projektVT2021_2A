@@ -17,7 +17,7 @@ img{
     display: grid;
     width: 100%;
     height: auto;
-    grid-template-rows: 10vh 75vh auto 200px;
+    grid-template-rows: 10vh 80vh auto 200px;
     grid-template-areas: 
     "nv"
     "lk"
@@ -50,11 +50,10 @@ img{
     margin: 0.3vh;
 }
 /* verkar inte funka korrekt  */
-/* .nav-but .toggle {
+#bak-circle.toggle {
     display: none;
-} */
-.toggle{
-    display: none;
+
+
 }
 .nav-link{
     visibility: hidden;
@@ -64,16 +63,14 @@ img{
 }
 .nav-links{
     position: fixed; 
-    align-items: center;
     justify-content: space-around;
     display: flex;
     flex-direction: column;
     list-style: none;
     height: 100vh;
     width: 100vw ;
-    background-color: maroon;  
- 
-
+    background-color: maroon;
+    transition: all 100ms linear, background-position 1ms;
 }
 .nav-links a{
    color: mintcream;
@@ -82,12 +79,14 @@ img{
    padding-left: 5%;
 }
 #cross{
-    height: 50px;
+    height: 5%;
     width: auto;
-    position: absolute;
-    top: 50px;
-    right: 75px;
-    cursor: pointer
+    position: fixed;
+    top: 3vh;
+    right: 3vh;
+    cursor: pointer;
+    z-index: 3;
+    transition: all 100ms linear
 }
 .nav-active{
     visibility: visible;
@@ -124,25 +123,25 @@ img{
     color: white;
 }
 #paint-sale1{
-grid-area: l1;
-display: flex;
-justify-content: center;
+    grid-area: l1;
+    display: flex;
+    justify-content: center;
 }
 
 #paint-sale2{
-grid-area: l2;
-display: flex;
-justify-content: center;
+    grid-area: l2;
+    display: flex;
+    justify-content: center;
 }
 #paint-sale3{
-grid-area: l3;
-display: flex;
-justify-content: center;
+    grid-area: l3;
+    display: flex;
+    justify-content: center;
 }
 #paint-sale4{
-grid-area: l4;
-display: flex;
-justify-content: center;
+    grid-area: l4;
+    display: flex;
+    justify-content: center;
 }
 .mobil-main{
     grid-area: ma;
