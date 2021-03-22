@@ -13,172 +13,220 @@ img{
     width: 40vw;
     height: auto;
 }
-.wrap{
+    .wrap{
+        display: grid;
+        width: 100%;
+        height: auto;
+        grid-template-rows: 10vh 1fr auto 200px;
+        grid-template-areas: 
+        "nv"
+        "lk"
+        "ma"
+        "fo"
+        ;
+    }
+    .nav-but{
+        grid-area: nv;
+        display: flex;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        justify-content: center;
+    }
+    #bak-circle{
+        height: 7vh;
+        width: 7vh;
+        border-radius: 50%;
+        background-color: maroon;
+        cursor: pointer;
+    }
+    .nav-but div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 0.7vh;
+        width: 4vh;
+        background-color: mintcream;
+        margin: 0.3vh;
+    }
+
+    #bak-circle.toggle {
+        display: none;
+    }
+    .nav-menu{
+        visibility: hidden;
+        position: fixed; 
+        top: 0px;
+        z-index: 2;
+    }
+    .nav-links{
+        position: fixed; 
+        justify-content: space-around;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        height: 100%;
+        width: 100% ;
+        background-color: maroon;
+        /* transition: all 100ms linear, background-position 1ms; */
+    }
+    .nav-links a{
+    color: mintcream;
+    text-decoration: none;
+    font-size: 300%;
+    padding-left: 5%;
+    }
+    #cross{
+        height: 5%;
+        width: auto;
+        position: fixed;
+        top: 3vh;
+        right: 3vh;
+        cursor: pointer;
+        z-index: 3;
+        /* transition: all 1000ms linear */
+    }
+    .nav-active{
+        visibility: visible;
+
+    }
+    .paint-sale{
+        grid-area: lk;
+        display: grid;
+        justify-content: center;
+        grid-template-rows: 50% 50%;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+        "l1 l2"
+        "l3 l4";
+        z-index: 1;
+    }
+    .paint-sale a{
+        display: flex;
+        margin: 1vh;
+    }
+    .paint-sale img{
+        height: 170%;
+        object-fit: cover;
+        
+    }
+    .paint-sale h3{
+        display: flex;
+        flex-wrap: wrap;
+        position: absolute;
+        color: white;
+        padding: 1vh;
+        font-size: 110%;
+        text-shadow: 2px 2px 4px black;
+    }
+    #paint-sale1{
+        grid-area: l1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    #paint-sale2{
+        grid-area: l2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    #paint-sale3{
+        grid-area: l3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    #paint-sale4{
+        grid-area: l4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .mobil-main{
+        grid-area: ma;
+        padding: 7%;
+    }
+    .mobil-main p{
+        font-size: 27px;
+        font-family: serif;
+        padding-bottom: 40px;
+    }
+    .mobil-main h1{
+        display: flex;
+        justify-content: center;
+        font-family: Arial, Helvetica, sans-serif; 
+        /* får komma på en ny sen  /\    */
+        margin-bottom: 25px;
+    }
+    .footer{
+        grid-area: fo;
+        background-color: maroon;
+        color: mintcream;
+        padding-top: 6px;
+        padding-left: 6px;
+    }
+    .footer h2{
+        margin-bottom: 20px;
+    }
+    .footer a{
+        text-decoration: none;
+        color: mistyrose;
+        background-color: firebrick;
+        font-size: 30px;
+        padding: 9px;
+        border-radius: 20%;
+    }
+/* __________________ */
+.wrap-salu{
     display: grid;
-    width: 100%;
     height: auto;
-    grid-template-rows: 10vh 1fr auto 200px;
+    width: 100vw;
+    grid-template-columns: 100%;
+    grid-template-rows: 10vh auto 200px;
     grid-template-areas: 
     "nv"
-    "lk"
-    "ma"
+    "sb"
     "fo"
     ;
 }
-.nav-but{
-    grid-area: nv;
-    display: flex;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    justify-content: center;
-}
-#bak-circle{
-    height: 7vh;
-    width: 7vh;
-    border-radius: 50%;
-    background-color: maroon;
-    cursor: pointer;
-}
-.nav-but div{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 0.7vh;
-    width: 4vh;
-    background-color: mintcream;
-    margin: 0.3vh;
-}
-
-#bak-circle.toggle {
-    display: none;
-}
-.nav-link{
-    visibility: hidden;
-    position: fixed; 
-    top: 0px;
-    z-index: 2;
-}
-.nav-links{
-    position: fixed; 
-    justify-content: space-around;
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    height: 100vh;
-    width: 100vw ;
-    background-color: maroon;
-    /* transition: all 100ms linear, background-position 1ms; */
-}
-.nav-links a{
-   color: mintcream;
-   text-decoration: none;
-   font-size: 300%;
-   padding-left: 5%;
-}
-#cross{
-    height: 5%;
-    width: auto;
-    position: fixed;
-    top: 3vh;
-    right: 3vh;
-    cursor: pointer;
-    z-index: 3;
-    /* transition: all 1000ms linear */
-}
-.nav-active{
-    visibility: visible;
-
-}
-.paint-sale{
-    grid-area: lk;
+.salu-box{
+    grid-area: sb;
     display: grid;
-    justify-content: center;
-    grid-template-rows: 50% 50%;
-    grid-template-columns: 50% 50%;
+    height: 200vh;
+    width: 100%;
+    grid-template-columns:auto ;
+    grid-template-rows:1fr 1fr 1fr 1fr ;
     grid-template-areas: 
-    "l1 l2"
-    "l3 l4";
-    z-index: 1;
-}
-.paint-sale a{
+    "b1"
+    "b2"
+    "b3"
+    "b4"
+    ;
     display: flex;
-    margin: 1vh;
-}
-.paint-sale img{
-    height: 170%;
-    object-fit: cover;
-    
-}
-.paint-sale h3{
-    display: flex;
-    flex-wrap: wrap;
-    position: absolute;
-    color: white;
-    padding: 1vh;
-    font-size: 110%;
-    text-shadow: 2px 2px 4px black;
-}
-#paint-sale1{
-    grid-area: l1;
-    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
 }
-
-#paint-sale2{
-    grid-area: l2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+.salu-box div{
+    height:50vh ;
+    width: 90vw;
+    margin: 2vh;
+    box-shadow: 1px 2px 10px 1px black;
 }
-#paint-sale3{
-    grid-area: l3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+.sbox-1{
+    grid-area: b1;
 }
-#paint-sale4{
-    grid-area: l4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+.sbox-2{
+    grid-area: b2;
 }
-.mobil-main{
-    grid-area: ma;
-    padding: 7%;
+.sbox-3{
+    grid-area: b3;
 }
-.mobil-main p{
-    font-size: 27px;
-    font-family: serif;
-    padding-bottom: 40px;
-}
-.mobil-main h1{
-    display: flex;
-    justify-content: center;
-    font-family: Arial, Helvetica, sans-serif; 
-    /* får komma på en ny sen  /\    */
-    margin-bottom: 25px;
-}
-.mobil-footer{
-    grid-area: fo;
-    background-color: maroon;
-    color: mintcream;
-    padding-top: 6px;
-    padding-left: 6px;
-}
-.mobil-footer h2{
-    margin-bottom: 20px;
-}
-.mobil-footer a{
-    text-decoration: none;
-    color: mistyrose;
-    background-color: firebrick;
-    font-size: 30px;
-    padding: 9px;
-    border-radius: 20%;
+.sbox-4{
+    grid-area: b4;
 }

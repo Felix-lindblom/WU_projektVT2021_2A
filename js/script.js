@@ -1,4 +1,4 @@
-const nav = document.querySelector('.nav-link')
+const nav = document.querySelector('.nav-menu')
 const circle = document.querySelector('#bak-circle')
 const cross = document.querySelector('#cross')
 
