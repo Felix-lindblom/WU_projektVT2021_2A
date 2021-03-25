@@ -33,8 +33,8 @@ img{
         justify-content: center;
     }
     #bak-circle{
-        height: 7vh;
-        width: 7vh;
+        height: 10vh;
+        width: 10vh;
         border-radius: 50%;
         background-color: maroon;
         cursor: pointer;
@@ -44,10 +44,10 @@ img{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 0.7vh;
-        width: 4vh;
+        height: 1vh;
+        width: 7vh;
         background-color: mintcream;
-        margin: 0.3vh;
+        margin: 0.45vh;
     }
 
     #bak-circle.toggle {
@@ -170,6 +170,7 @@ img{
         color: mintcream;
         padding-top: 6px;
         padding-left: 6px;
+        height: 22vh;
     }
     .footer h2{
         margin-bottom: 3vh;
@@ -177,7 +178,7 @@ img{
     }
     .footer a{
         text-decoration: none;
-        color: mistyrose;
+        color: mintcream;
         background-color: firebrick;
         font-size: 4vh;
         padding: 2.5vh;
@@ -274,4 +275,79 @@ img{
 }
 .sbox-4{
     grid-area: b4;
+}
+/* ________________________ */
+.wrap-nya{
+    height: auto;
+    display: grid;
+    grid-template-columns: 100vw ;
+    grid-template-rows:auto 1fr 70vh 20vh;
+    grid-template-areas: 
+    "nv"
+    "vn"
+    "gv"
+    "fo"
+    ;
+    display: flex;
+    flex-direction: column;
+}
+.nya-verk{
+    grid-area: vn;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nya-verk div{
+    height: 45vh;
+    width: 90vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 0.5px black;
+    margin: 5vh;
+    box-shadow: 1px 2px 8px 1px black;
+}
+.nya-verk h2{
+    font-size: 10vh;
+    margin: 2vh;
+}
+.nya-verk p{
+    font-size: 3vh;
+    margin: 1vh;
+}
+.nya-verk img{
+    width: 80%;
+    height: auto;
+}
+.nya-verk button{
+    position: absolute;
+    margin: 1vh;
+    bottom: 10%;
+}
+.link-g{
+    grid-area: gv;
+    height: auto;
+    width: 90vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+    margin: 2vh;
+    margin-bottom: 8vh;
+}
+
+.link-g h2{
+    font-size: 10vw;
+    margin: 3vw;
+}
+.link-g a{
+    text-decoration: none;
+    color: mintcream;
+    background-color: firebrick;
+    font-size: 7vh;
+    padding: 2.5vh;
+    border-radius: 2vh;
 }
