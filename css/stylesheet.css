@@ -321,10 +321,24 @@ img{
     width: 80%;
     height: auto;
 }
-.nya-verk button{
+.lasVerk{
+    position: relative;    
+}
+.nya-verk h3{
+    cursor: pointer;
     position: absolute;
+    height: 3vh;
+    font-size: 2vh;
+    padding: 1vh;
+    border-radius: 1vh;
     margin: 1vh;
-    bottom: 10%;
+    bottom: 1vh;
+    background-color: rgba(128,128,128, 0.7);
+    
+    color: mintcream;
+}
+.lasmer{
+    height: 60vh;
 }
 .link-g{
     grid-area: gv;
