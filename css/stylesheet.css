@@ -3,6 +3,7 @@ margin: 0px;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 padding: 0px;
 }
+/* Bara lite kod för snyggare i början av varje sida */
 h1{
     font-size: 70px;
 }
@@ -13,6 +14,7 @@ img{
     width: 40vw;
     height: auto;
 }
+/* _________ */
     .wrap{
         display: grid;
         width: 100vw;
@@ -49,7 +51,6 @@ img{
         background-color: mintcream;
         margin: 0.45vh;
     }
-
     #bak-circle.toggle {
         display: none;
     }
@@ -89,7 +90,6 @@ img{
     }
     .nav-active{
         visibility: visible;
-
     }
     .paint-sale{
         grid-area: lk;
@@ -105,6 +105,8 @@ img{
     .paint-sale a{
         display: flex;
         margin: 1vh;
+        margin-left: 0px;
+        margin-right: 0px;
     }
     .paint-sale img{
         height: 170%;
@@ -209,7 +211,7 @@ img{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 2vh;
+    padding: 2vh;
 }
 .kotakt h2{
     font-size: 3vh;
@@ -246,7 +248,7 @@ img{
     height: auto;
     width: 65%;
     float: left;
-    margin-left: 10vw;
+    padding-left: 10vw;
     margin-top: 2.3vh;
 }
 .salu-box h3{
@@ -263,7 +265,7 @@ img{
 /* ser lite udda med text saken på sidan med text cursor (som är då "auto")*/
 #pris{
     font-size: 4vh;
-    margin-left: 0.1vw;
+    padding-left: 0.1vw;
 }
 .sbox-1{
     grid-area: b1;
@@ -280,6 +282,7 @@ img{
 /* ________________________ */
 .wrap-nya{
     height: auto;
+    width: 100vw;
     display: grid;
     grid-template-columns: 100vw ;
     grid-template-rows:auto 1fr 70vh 20vh;
@@ -291,6 +294,7 @@ img{
     ;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 .nya-verk{
     grid-area: vn;
@@ -299,7 +303,9 @@ img{
     justify-content: center;
     align-items: center;
 }
+/* Tror det finns problem med namenet och java koden */
 .nya-verk div{
+    /* min-height: 45vh; */
     height: 45vh;
     width: 90vw;
     overflow: hidden;
@@ -308,6 +314,8 @@ img{
     align-items: center;
     border: solid 0.5px black;
     margin: 5vh;
+    margin-right: 0px;
+    margin-left: 0px;
     box-shadow: 1px 2px 8px 1px black;
 }
 .nya-verk h2{
@@ -338,9 +346,10 @@ img{
     
     color: mintcream;
 }
-.lasmer{
-    height: 60vh;
-}
+/* .nya-verk .lasmer {
+    max-height: 100vh;
+    height: auto;
+} */
 .link-g{
     grid-area: gv;
     height: auto;
