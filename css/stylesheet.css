@@ -26,6 +26,10 @@ img{
         "ma"
         "fo"
         ;
+        display: flex;
+        flex-direction: column;
+        /* align-items: center;
+        justify-items: center; */
     }
     .nav-but{
         grid-area: nv;
@@ -56,6 +60,7 @@ img{
     }
     .nav-menu{
         visibility: hidden;
+        opacity: 0;
         position: fixed; 
         top: 0px;
         z-index: 2;
@@ -70,13 +75,13 @@ img{
         width: 100% ;
         background-color: maroon;
         font-size: 2vh;
-        /* transition: all 100ms linear, background-position 1ms; */
+    
     }
     .nav-links a{
-    color: mintcream;
-    text-decoration: none;
-    font-size: 300%;
-    padding-left: 5%;
+        color: mintcream;
+        text-decoration: none;
+        font-size: 300%;
+        padding-left: 5%;
     }
     #cross{
         height: 5%;
@@ -86,10 +91,11 @@ img{
         right: 3vh;
         cursor: pointer;
         z-index: 3;
-        /* transition: all 1000ms linear */
     }
     .nav-active{
         visibility: visible;
+        opacity: 1;
+        transition: visibility 0.2s linear ,opacity 0.2s linear;
     }
     .paint-sale{
         grid-area: lk;
@@ -103,15 +109,12 @@ img{
         z-index: 1;
     }
     .paint-sale a{
-        display: flex;
-        margin: 1vh;
-        margin-left: 0px;
-        margin-right: 0px;
+        margin: 2vw;
     }
     .paint-sale img{
         height: 170%;
+        width: 100%;
         object-fit: cover;
-        
     }
     .paint-sale h3{
         display: flex;
@@ -303,10 +306,8 @@ img{
     justify-content: center;
     align-items: center;
 }
-/* Tror det finns problem med namenet och java koden */
 .nya-verk div{
-    /* min-height: 45vh; */
-    height: 45vh;
+    height: auto;
     width: 90vw;
     overflow: hidden;
     display: flex;
@@ -324,7 +325,8 @@ img{
 }
 .nya-verk p{
     font-size: 3vh;
-    margin: 1vh;
+    margin: 2vw;
+    margin-bottom: 2.5vh;
 }
 .nya-verk img{
     width: 80%;
@@ -343,13 +345,17 @@ img{
     margin: 1vh;
     bottom: 1vh;
     background-color: rgba(128,128,128, 0.7);
-    
     color: mintcream;
+
+    /* för fin slippning isåfall */
+    visibility: hidden;
+
+
 }
-/* .nya-verk .lasmer {
-    max-height: 100vh;
-    height: auto;
-} */
+.lasmer div{
+    min-height: 101vh;
+    height: 100vh;
+}
 .link-g{
     grid-area: gv;
     height: auto;
@@ -374,4 +380,17 @@ img{
     font-size: 7vh;
     padding: 2.5vh;
     border-radius: 2vh;
+}
+/* ________________ */
+.wrap-old{
+    height: 100vh;
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr auto auto 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+    "nv nv nv nv"
+    "sd sc sc fo"
+    ;
+    display: flex;
 }
