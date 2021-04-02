@@ -392,11 +392,12 @@ img{
     "nv nv nv"
     "sd sc fo"
     ;
+    overflow-y: hidden;
 }
 .nav-but-old{
-    position: sticky;
-    left: 50vw;
-
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0%);
 }
 .side{
     grid-area: sd;
@@ -405,6 +406,8 @@ img{
     width: 37vw;   
     display: flex;
     overflow: hidden;
+    border-bottom-right-radius: 100%;
+    border-top-right-radius: 15%;
 }
 .side h1{
     writing-mode: vertical-rl;
@@ -424,10 +427,15 @@ img{
     display: flex;
 }
 .showcase div{
+    height: 70vh;
+    width: 70vw;    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 3vw;
+    border: solid 0.5px black;
+    box-shadow: 1px 2px 8px 1px black;
 }
 .showcase img{
     width: 70vw;
@@ -436,8 +444,31 @@ img{
 /* udda storlek leker inte bra men lösning kan vara göra div som sedan tavlan kan få 100%, detta då flexibelt och kostant */
 .showcase h2{
     margin: 2vw;
-    font-size: 15vw;
+    font-size: 11vw;
 }
 .side-footer{
     grid-area: fo;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: maroon;
+    border-radius: 30px;
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
 }
+.side-footer h2{
+    color: mintcream;
+    font-size: 10vw;
+    margin: 2vw;
+}
+/* läs html */
+.side-footer a{
+    text-decoration: none;
+    color: mintcream;
+    background-color: firebrick;
+    font-size: 10vw;
+    padding: 2vw;
+    border-radius: 20px;
+}
+/* ___________ */
