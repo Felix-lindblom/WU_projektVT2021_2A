@@ -14,7 +14,7 @@ img{
     width: 40vw;
     height: auto;
 }
-/* _________ */
+/* _______________________________________________________________________ */
     .wrap{
         display: grid;
         width: 100vw;
@@ -28,6 +28,7 @@ img{
         ;
         display: flex;
         flex-direction: column;
+        overflow-x: hidden;
         /* align-items: center;
         justify-items: center; */
     }
@@ -190,7 +191,7 @@ img{
         padding: 2.5vh;
         border-radius: 20%;
     }
-/* __________________ */
+/* _______________________________________________________________________ */
 .wrap-salu{
     display: grid;
     height: auto;
@@ -282,7 +283,7 @@ img{
 .sbox-4{
     grid-area: b4;
 }
-/* ________________________ */
+/* _______________________________________________________________________ */
 .wrap-nya{
     height: auto;
     width: 100vw;
@@ -298,6 +299,7 @@ img{
     display: flex;
     flex-direction: column;
     overflow: hidden;
+
 }
 .nya-verk{
     grid-area: vn;
@@ -381,7 +383,7 @@ img{
     padding: 2.5vh;
     border-radius: 2vh;
 }
-/* ________________ */
+/* _______________________________________________________________________ */
 .wrap-old{
     height: 100vh;
     width: auto;
@@ -471,4 +473,55 @@ img{
     padding: 2vw;
     border-radius: 20px;
 }
-/* ___________ */
+/* _______________________________________________________________________ */
+.wrap-for{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 40vh 45vh 20vh;
+    grid-template-areas: 
+    "nv"
+    "hf"
+    "mf"
+    "fo"
+    ;
+    overflow-x: hidden;
+}
+.for-header{
+    grid-area: hf;
+    position: relative;
+    overflow: hidden;
+}
+.for-header img{
+    height:auto ;
+    width:100% ;
+    object-fit: cover;
+    transform: translate(0%,-15%);
+}
+.for-header h1{
+    font-size: 11vw;
+    color: mintcream;
+    text-shadow: 2px 3px maroon;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    right: 10%;
+}
+.main-for{
+    grid-area:mf;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 3vw;
+}
+.main-for p{
+    font-size: 7vw;
+    margin: 1vh;
+}
+.main-for h2{
+    font-size: 9vw;
+    margin: 1.5vh;
+}
+
