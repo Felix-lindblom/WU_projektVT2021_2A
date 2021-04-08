@@ -32,6 +32,10 @@ img{
         /* align-items: center;
         justify-items: center; */
     }
+    #header-text{
+        visibility: hidden;
+        font-size: 0vh;
+    }
     .nav-but{
         grid-area: nv;
         display: flex;
@@ -190,6 +194,57 @@ img{
         font-size: 4vh;
         padding: 2.5vh;
         border-radius: 20%;
+    }
+
+
+    @media only screen and (min-width: 768px){
+        
+        .wrap{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 50vh auto 20vh;
+        grid-template-areas: 
+        "he"
+        "lk"
+        "ma"
+        "fo"
+        ;
+        }
+
+        header{
+            grid-area: he;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #header-text{
+            visibility: visible;
+            font-size: 10vw;
+            margin: 1vh;
+            color: maroon;
+        }
+        .nav-but{
+            justify-content: inherit;
+            margin: 1vh;
+            margin-right: 2vw;
+        }
+        .paint-sale{
+            grid-area: lk;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: lightgray;
+        }
+
+
+
+        .mobil-main h1{
+            font-size: 15vh;
+        }
+        .mobil-main p{
+            font-size: 6vh;
+        }
+
     }
 /* _______________________________________________________________________ */
 .wrap-salu{
