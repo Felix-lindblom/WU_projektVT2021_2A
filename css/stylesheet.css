@@ -32,9 +32,9 @@ img{
         /* align-items: center;
         justify-items: center; */
     }
-    #header-text{
+    #head-text{
         visibility: hidden;
-        font-size: 0vh;
+        font-size: 0%;
     }
     .nav-but{
         grid-area: nv;
@@ -120,6 +120,8 @@ img{
         height: 170%;
         width: 100%;
         object-fit: cover;
+        /* verkar som denna inte funkar korrekt utan måste manuelt sättas på varje bild */
+        /* overflow: hidden; */
     }
     .paint-sale h3{
         display: flex;
@@ -196,56 +198,6 @@ img{
         border-radius: 20%;
     }
 
-
-    @media only screen and (min-width: 768px){
-        
-        .wrap{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 50vh auto 20vh;
-        grid-template-areas: 
-        "he"
-        "lk"
-        "ma"
-        "fo"
-        ;
-        }
-
-        header{
-            grid-area: he;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        #header-text{
-            visibility: visible;
-            font-size: 10vw;
-            margin: 1vh;
-            color: maroon;
-        }
-        .nav-but{
-            justify-content: inherit;
-            margin: 1vh;
-            margin-right: 2vw;
-        }
-        .paint-sale{
-            grid-area: lk;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            background-color: lightgray;
-        }
-
-
-
-        .mobil-main h1{
-            font-size: 15vh;
-        }
-        .mobil-main p{
-            font-size: 6vh;
-        }
-
-    }
 /* _______________________________________________________________________ */
 .wrap-salu{
     display: grid;
@@ -277,6 +229,7 @@ img{
 }
 .kotakt h3{
     font-size: 2.5vh;
+    color: maroon;
 }
 .salu-box{
     grid-area: sb;
@@ -580,3 +533,153 @@ img{
     margin: 1.5vh;
 }
 
+    @media only screen and (min-width: 768px){
+
+        .footer{
+            margin-top: 5vh;
+        }
+
+        #head-text{
+            visibility: visible;
+            font-size: 10vw;
+        }
+        .wrap{
+        display: grid;
+        width: 100vw;
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto 20vh;
+        grid-template-areas: 
+        "nv"
+        "lk"
+        "ma"
+        "fo"
+        ;
+        overflow-y: hidden;
+        }
+        .header-text{
+            grid-area: nv;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 1vh;
+            color: maroon;
+        }
+        .nav-but{
+            justify-content: inherit;
+            margin: 1vh;
+            margin-right: 2vw;
+        }
+        .paint-sale{
+            margin-top: 5vh;
+            grid-area: lk;
+            display: grid;
+            height: auto;
+            width: 100vw;
+            grid-template-columns: 25% 25% 25% 25%;
+            grid-template-rows: 1fr ;
+            grid-template-areas: 
+            "l1 l2 l3 l4"
+            ;
+            background-color: rgba(0, 0, 0, 0.70);
+        }
+        .paint-sale img{
+            opacity: 50%;
+            height: auto;
+            width: 20vw;
+            object-fit: contain;
+            overflow: visible;
+            z-index: 1;
+            padding-top: 2vh;
+            padding-bottom:2vh ;
+        }
+
+        .paint-sale img:hover{
+            z-index: 3;
+            transition: all ease-in 0.25s;
+            opacity: 100%;
+            height: auto;
+            width: 30vw;
+            margin: 0%;
+            padding: 0%;
+        }
+        .paint-sale img:not(:hover){
+            transition: all ease-in 0.45s;
+        }
+        .paint-sale h3{
+            z-index: 2;
+        }
+        #paint-sale1{
+            overflow: visible;
+        }
+        #paint-sale2{
+            overflow: visible;
+        }
+        #paint-sale3{
+            overflow: visible;
+        }
+        #paint-sale4{
+            overflow: visible;
+        }
+        .mobil-main{
+            padding-bottom: 0%;
+        }
+        .mobil-main h1{
+            font-size: 15vh;
+        }
+        .mobil-main p{
+            font-size: 6vh;
+        }
+        /* _______________________________________________________________________ */
+
+        .wrap-salu{
+            height: auto;
+            width: 100vw;
+            display: grid;
+            grid-template-columns:75% 25% ;
+            grid-template-rows: auto 85vh 20vh;
+            grid-template-areas: 
+            "nv nv"
+            "sb kt"
+            "fo fo"
+            ;
+        }
+
+        .salu-box{
+            height: 100%;
+            width: 100%;
+            display: grid;
+            grid-template-columns:50% 50% ;
+            grid-template-rows:50% 50% ;
+            grid-template-areas: 
+            "b1 b2"
+            "b3 b4"
+            ;
+            margin: 1vw;
+            margin-bottom: 5vh;
+        }
+        .salu-box div{
+            height: 95%;
+            width: 95%;
+            display: flex;
+            flex-direction: row;
+            margin: 2vw;
+        }
+        .salu-box img{
+            padding: 0%;
+            margin: 0%;
+        }
+        .salu-box h3{
+            margin: 0%;
+        }
+        .kotakt{
+            grid-area: kt;
+            padding: 15%;
+        }
+        .kotakt h2{
+            font-size: 2.5vw;
+        }
+        .kotakt h3{
+            font-size: 2vw;
+        }
+    }
