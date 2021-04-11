@@ -70,6 +70,9 @@ img{
         top: 0px;
         z-index: 2;
     }
+    .nav-menu:not(.nav-active){
+        transition: visibility 0.2s linear ,opacity 0.2s linear;
+    }
     .nav-links{
         position: fixed; 
         justify-content: space-around;
@@ -446,9 +449,10 @@ img{
     margin: 3vw;
     border: solid 0.5px black;
     box-shadow: 1px 2px 8px 1px black;
+    overflow: hidden;
 }
 .showcase img{
-    width: 70vw;
+    width: 100%;
     height: auto;
 }
 /* udda storlek leker inte bra men lösning kan vara göra div som sedan tavlan kan få 100%, detta då flexibelt och kostant */
@@ -481,13 +485,16 @@ img{
     padding: 2vw;
     border-radius: 20px;
 }
+.old-footer{
+    visibility: hidden;
+}
 /* _______________________________________________________________________ */
 .wrap-for{
     height: 100vh;
     width: 100vw;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto 40vh 45vh 20vh;
+    grid-template-rows: auto 40vh 45vh 40vh;
     grid-template-areas: 
     "nv"
     "hf"
@@ -498,6 +505,7 @@ img{
 }
 .for-header{
     grid-area: hf;
+    
     position: relative;
     overflow: hidden;
 }
@@ -508,6 +516,9 @@ img{
     transform: translate(0%,-15%);
 }
 .for-header h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 11vw;
     color: mintcream;
     text-shadow: 2px 3px maroon;
@@ -537,25 +548,22 @@ img{
 
         .footer{
             margin-top: 5vh;
+            overflow: visible;
+            height: 100%;
         }
-
+        .footer h2{
+            margin-left: 2vw;
+            margin: 3vw;
+            padding-bottom: 2vh;
+            font-size: 120px;
+        }
+        .footer a{
+            margin: 3vw;
+        }
         #head-text{
             visibility: visible;
             font-size: 10vw;
-        }
-        .wrap{
-        display: grid;
-        width: 100vw;
-        height: auto;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto 20vh;
-        grid-template-areas: 
-        "nv"
-        "lk"
-        "ma"
-        "fo"
-        ;
-        overflow-y: hidden;
+            margin-left: 2vw;
         }
         .header-text{
             grid-area: nv;
@@ -564,6 +572,20 @@ img{
             align-items: center;
             margin: 1vh;
             color: maroon;
+        }
+        .wrap{
+        display: grid;
+        width: 100vw;
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto 40vh;
+        grid-template-areas: 
+        "nv"
+        "lk"
+        "ma"
+        "fo"
+        ;
+        overflow: hidden;
         }
         .nav-but{
             justify-content: inherit;
@@ -593,7 +615,6 @@ img{
             padding-top: 2vh;
             padding-bottom:2vh ;
         }
-
         .paint-sale img:hover{
             z-index: 3;
             transition: all ease-in 0.25s;
@@ -625,11 +646,12 @@ img{
             padding-bottom: 0%;
         }
         .mobil-main h1{
-            font-size: 15vh;
+            font-size: 15vw;
         }
         .mobil-main p{
-            font-size: 6vh;
+            font-size: 55px;
         }
+        /* footer fixning */
         /* _______________________________________________________________________ */
 
         .wrap-salu{
@@ -637,7 +659,7 @@ img{
             width: 100vw;
             display: grid;
             grid-template-columns:75% 25% ;
-            grid-template-rows: auto 85vh 20vh;
+            grid-template-rows: auto 85vh 40vh;
             grid-template-areas: 
             "nv nv"
             "sb kt"
@@ -681,5 +703,129 @@ img{
         }
         .kotakt h3{
             font-size: 2vw;
+        }
+        /* _______________________________________________________________________ */
+        .wrap-nya{
+            height: auto;
+            width: 100vw;
+            display: grid;
+            grid-template-columns: 100vw ;
+            grid-template-rows:auto 1fr 70vh 40vh;
+            grid-template-areas: 
+            "nv"
+            "vn"
+            "gv"
+            "fo"
+            ;
+            overflow-x: hidden;
+            overflow: visible;
+        }
+        .nya-verk div{
+            width: 1000px;
+        }
+        .nya-verk h2{
+            font-size: 150px;
+        }
+        .nya-verk p{
+            font-size: 30px;
+        }
+        .link-g h2{
+            font-size: 9vw;
+        }
+        .link-g a{
+            font-size: 8vw;
+        }
+
+        /* _______________________________________________________________________ */
+        
+        .wrap-old{
+            height: auto;
+            width: 100vw;
+            display: grid;
+            grid-template-rows: auto auto 40vh;
+            grid-template-columns: 15% 85%;
+            grid-template-areas: 
+            "nv nv"
+            "sd sc"
+            "fo fo"
+            ;
+            overflow: hidden;
+        }
+        .nav-but-old{
+        position: inherit;
+        transform: translate(0%, 0%);
+    }
+        .side{
+            grid-area: sd;
+            background-color: maroon;
+            border-radius: 20vw;
+            display: flexbox;
+            justify-content: center;
+            align-items: center;
+            width: 10vw;
+            height: 75vh;
+            margin-left: 5vw;
+        }
+        .side h1{
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            font-size: 5vh;
+        }
+        .side img{
+            display: none;
+        }
+        .showcase{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .showcase div{
+            height: auto;
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+           
+        }
+        .showcase div h2{
+            font-size: 200%;
+        }
+        .showcase img{
+            height: auto;
+            width: 35vw;
+            margin-top: 3vh;
+        }
+        .side-footer{
+            display: none;
+        }
+        .old-footer{
+            visibility: visible;
+        }
+        /* _______________________________________________________________________ */
+        .wrap-for{
+            height: auto;
+            width: 100vw;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto 70vh auto 40vh;
+            overflow: hidden;
+        }
+
+        .for-header h1{
+            font-size: 11vw;
+            padding: 1vh;
+        }
+        .main-for{
+            padding-top: 1vh;
+            padding-bottom: 1vh;
+        }
+        .main-for p{
+            font-size: 50px;
+        }
+        .main-for h2{
+            font-size: 70px;
         }
     }
