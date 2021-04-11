@@ -759,7 +759,7 @@ img{
             grid-area: sd;
             background-color: maroon;
             border-radius: 20vw;
-            display: flexbox;
+            display: flex;
             justify-content: center;
             align-items: center;
             width: 10vw;
