@@ -369,7 +369,7 @@ img{
     min-height: 101vh;
     height: 100vh;
 }
-.link-g{
+#link-g{
     grid-area: gv;
     height: auto;
     width: 90vw;
@@ -382,11 +382,11 @@ img{
     margin-bottom: 8vh;
 }
 
-.link-g h2{
+#link-g h2{
     font-size: 10vw;
     margin: 3vw;
 }
-.link-g a{
+#link-g a{
     text-decoration: none;
     color: mintcream;
     background-color: firebrick;
@@ -547,7 +547,7 @@ img{
     @media only screen and (min-width: 768px){
 
         .footer{
-            margin-top: 5vh;
+            margin-top: auto;
             overflow: visible;
             height: 100%;
         }
@@ -555,14 +555,14 @@ img{
             margin-left: 2vw;
             margin: 3vw;
             padding-bottom: 2vh;
-            font-size: 120px;
+            font-size: 70px;
         }
         .footer a{
             margin: 3vw;
         }
         #head-text{
             visibility: visible;
-            font-size: 10vw;
+            font-size: 100px;
             margin-left: 2vw;
         }
         .header-text{
@@ -574,16 +574,16 @@ img{
             color: maroon;
         }
         .wrap{
-        display: grid;
-        width: 100vw;
-        height: auto;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto 40vh;
-        grid-template-areas: 
-        "nv"
-        "lk"
-        "ma"
-        "fo"
+            display: grid;
+            width: 100vw;
+            height: auto;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto 40vh;
+            grid-template-areas: 
+            "nv"
+            "lk"
+            "ma"
+            "fo"
         ;
         overflow: hidden;
         }
@@ -646,10 +646,10 @@ img{
             padding-bottom: 0%;
         }
         .mobil-main h1{
-            font-size: 15vw;
+            font-size: 1000%;
         }
         .mobil-main p{
-            font-size: 55px;
+            font-size: 200%;
         }
         /* footer fixning */
         /* _______________________________________________________________________ */
@@ -659,7 +659,7 @@ img{
             width: 100vw;
             display: grid;
             grid-template-columns:75% 25% ;
-            grid-template-rows: auto 85vh 40vh;
+            grid-template-rows: auto auto 40vh;
             grid-template-areas: 
             "nv nv"
             "sb kt"
@@ -668,8 +668,8 @@ img{
         }
 
         .salu-box{
-            height: 100%;
-            width: 100%;
+            height: 95%;
+            width: 95%;
             display: grid;
             grid-template-columns:50% 50% ;
             grid-template-rows:50% 50% ;
@@ -679,6 +679,7 @@ img{
             ;
             margin: 1vw;
             margin-bottom: 5vh;
+            padding-bottom: 10vh;
         }
         .salu-box div{
             height: 95%;
@@ -686,6 +687,7 @@ img{
             display: flex;
             flex-direction: row;
             margin: 2vw;
+            
         }
         .salu-box img{
             padding: 0%;
@@ -719,20 +721,33 @@ img{
             ;
             overflow-x: hidden;
             overflow: visible;
+           
         }
         .nya-verk div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             width: 1000px;
+            height: auto;
         }
         .nya-verk h2{
-            font-size: 150px;
+            font-size: 700%;
+            margin: 1vh;
         }
         .nya-verk p{
-            font-size: 30px;
+            font-size: 150%;
+            margin: 5vh;
         }
-        .link-g h2{
+        .nya-verk img{
+            height: 70vh;
+            max-height: 500px;
+            width: auto;
+        }
+        #link-g h2{
             font-size: 9vw;
         }
-        .link-g a{
+        #link-g a{
             font-size: 8vw;
         }
 
@@ -793,6 +808,18 @@ img{
         .showcase div h2{
             font-size: 200%;
         }
+        #old-text{
+            height: 40vw;
+            width: 35vw;
+            display: flex;
+            justify-content: center;
+            
+            /* border och shadow behövs ta bort */
+        }
+        #old-text p{
+            margin: 1vw;
+            font-size: 250%;
+        }
         .showcase img{
             height: auto;
             width: 35vw;
@@ -810,12 +837,12 @@ img{
             width: 100vw;
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: auto 70vh auto 40vh;
+            grid-template-rows: auto 60vh 500px 40vh;
             overflow: hidden;
         }
 
         .for-header h1{
-            font-size: 11vw;
+            font-size: 100px;
             padding: 1vh;
         }
         .main-for{
@@ -823,9 +850,9 @@ img{
             padding-bottom: 1vh;
         }
         .main-for p{
-            font-size: 50px;
+            font-size: 30px;
         }
         .main-for h2{
-            font-size: 70px;
+            font-size: 50px;
         }
     }
