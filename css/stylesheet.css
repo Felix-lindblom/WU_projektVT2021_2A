@@ -1,7 +1,7 @@
 *{
 margin: 0px;
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 padding: 0px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 /* Bara lite kod för snyggare i början av varje sida */
 h1{
@@ -9,10 +9,6 @@ h1{
 }
 h2{
     font-size: 50px;
-}
-img{
-    width: 40vw;
-    height: auto;
 }
 /* _______________________________________________________________________ */
     .wrap{
@@ -44,8 +40,8 @@ img{
         justify-content: center;
     }
     #bak-circle{
-        height: 10vh;
-        width: 10vh;
+        height: 110px;
+        width: 110px;
         border-radius: 50%;
         background-color: maroon;
         cursor: pointer;
@@ -55,10 +51,11 @@ img{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 1vh;
-        width: 7vh;
         background-color: mintcream;
-        margin: 0.45vh;
+        /* använder 6 som grund där hjärnan gillar samband, nu har jag då för hållande på 2-11-1 */
+        height: 12px;
+        width: 66px;
+        margin: 6px;
     }
     #bak-circle.toggle {
         display: none;
@@ -163,16 +160,16 @@ img{
         align-items: center;
         overflow: hidden;
     }
-    .mobil-main{
+    .front-main{
         grid-area: ma;
         padding: 7%;
     }
-    .mobil-main p{
+    .front-main p{
         font-size: 10vw;
         font-family: serif;
         padding-bottom: 40px;
     }
-    .mobil-main h1{
+    .front-main h1{
         display: flex;
         justify-content: center;
         font-family: Arial, Helvetica, sans-serif; 
@@ -248,7 +245,7 @@ img{
     flex-direction: column;
     align-items: center;
 }
-.salu-box div{
+.salu-box section{
     height:50vh ;
     width: 90vw;
     margin-bottom: 5vh;
@@ -319,7 +316,7 @@ img{
     justify-content: center;
     align-items: center;
 }
-.nya-verk div{
+.nya-verk article{
     height: auto;
     width: 90vw;
     overflow: hidden;
@@ -439,7 +436,7 @@ img{
     grid-area: sc;
     display: flex;
 }
-.showcase div{
+.showcase section{
     height: 70vh;
     width: 70vw;    
     display: flex;
@@ -503,19 +500,18 @@ img{
     ;
     overflow-x: hidden;
 }
-.for-header{
+.for-headline{
     grid-area: hf;
-    
     position: relative;
     overflow: hidden;
 }
-.for-header img{
+.for-headline img{
     height:auto ;
     width:100% ;
     object-fit: cover;
     transform: translate(0%,-15%);
 }
-.for-header h1{
+.for-headline h1{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -549,6 +545,7 @@ img{
         .footer{
             margin-top: auto;
             overflow: visible;
+            height: 0px;
             height: 100%;
         }
         .footer h2{
@@ -559,13 +556,14 @@ img{
         }
         .footer a{
             margin: 3vw;
+            font-size: 70px;
         }
         #head-text{
             visibility: visible;
             font-size: 100px;
             margin-left: 2vw;
         }
-        .header-text{
+        .top{
             grid-area: nv;
             display: flex;
             justify-content: space-between;
@@ -598,7 +596,7 @@ img{
             display: grid;
             height: auto;
             width: 100vw;
-            grid-template-columns: 25% 25% 25% 25%;
+            grid-template-columns: auto auto auto auto;
             grid-template-rows: 1fr ;
             grid-template-areas: 
             "l1 l2 l3 l4"
@@ -609,15 +607,16 @@ img{
             opacity: 50%;
             height: auto;
             width: 20vw;
-            object-fit: contain;
+            object-fit: scale-down;
             overflow: visible;
-            z-index: 1;
+            
             padding-top: 2vh;
             padding-bottom:2vh ;
         }
         .paint-sale img:hover{
-            z-index: 3;
+            z-index: 2;
             transition: all ease-in 0.25s;
+            object-fit: contain;
             opacity: 100%;
             height: auto;
             width: 30vw;
@@ -628,7 +627,7 @@ img{
             transition: all ease-in 0.45s;
         }
         .paint-sale h3{
-            z-index: 2;
+            z-index: 1;
         }
         #paint-sale1{
             overflow: visible;
@@ -642,13 +641,13 @@ img{
         #paint-sale4{
             overflow: visible;
         }
-        .mobil-main{
-            padding-bottom: 0%;
+        .front-main{
+            padding-bottom: 3vh;
         }
-        .mobil-main h1{
+        .front-main h1{
             font-size: 1000%;
         }
-        .mobil-main p{
+        .front-main p{
             font-size: 200%;
         }
         /* footer fixning */
@@ -681,7 +680,7 @@ img{
             margin-bottom: 5vh;
             padding-bottom: 10vh;
         }
-        .salu-box div{
+        .salu-box section{
             height: 95%;
             width: 95%;
             display: flex;
@@ -712,18 +711,16 @@ img{
             width: 100vw;
             display: grid;
             grid-template-columns: 100vw ;
-            grid-template-rows:auto 1fr 70vh 40vh;
+            grid-template-rows:auto 1fr 40vh;
             grid-template-areas: 
             "nv"
             "vn"
-            "gv"
             "fo"
             ;
             overflow-x: hidden;
             overflow: visible;
-           
         }
-        .nya-verk div{
+        .nya-verk article{
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -744,11 +741,15 @@ img{
             max-height: 500px;
             width: auto;
         }
+        #link-g{
+            border: 0px;
+            box-shadow: none;
+        }
         #link-g h2{
-            font-size: 9vw;
+            font-size: 90px;
         }
         #link-g a{
-            font-size: 8vw;
+            font-size: 80px;
         }
 
         /* _______________________________________________________________________ */
@@ -796,7 +797,7 @@ img{
             justify-content: center;
             align-items: center;
         }
-        .showcase div{
+        .showcase section{
             height: auto;
             width: auto;
             display: flex;
@@ -805,16 +806,15 @@ img{
             justify-content: space-between;
            
         }
-        .showcase div h2{
+        .showcase section h2{
             font-size: 200%;
         }
         #old-text{
-            height: 40vw;
+            height: 20vw;
             width: 35vw;
             display: flex;
             justify-content: center;
             
-            /* border och shadow behövs ta bort */
         }
         #old-text p{
             margin: 1vw;
