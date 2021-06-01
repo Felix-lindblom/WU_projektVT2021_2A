@@ -1,0 +1,1 @@
+hade fundering att ha en loga och jag gjorde en kväll men tyckte det inte passade så detta är mer som en place holder som kan användas att testa udda bilstorleker och se om koden är väl gjorde. Desutom unvidker jag copyright med att ha en egen bild-
